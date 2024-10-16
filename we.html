@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  border-bottom: 1px solid #aaa;
+}
+
+.active, .collapsible:hover {
+  background-color: #ffffff;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+
+</style>
+</head>
+<body>
+<h1 style="border-bottom: 1px solid #000000;">Akshada Kulkarni</h1>
+
+<div id="toc_container">
+    <p class="toc_title">Contents</p>
+    <ul class="toc_list">
+      <li><a href="#Early_Life">1. Early Life</a>
+    </li>
+    <li><a href="#Career">2. Career</a></li>
+    
+    <ul>
+        <li><a href="#First_Internship">2.1 First Internship</a></li>
+      </ul>
+    </ul>
+    </div>
+
+<button type="button" class="collapsible" id="#Early_Life">Early Life</button>
+<div class="content">
+  <p>Akshada was born in the U.S., where she lived for nine years. She later moved to India, and is currently attending university in Hyderabad.</p>
+</div>
+
+<button type="button" class="collapsible" id="Career">Career</button>
+<div class="content">
+  <p></p>
+
+<button type="button" class="collapsible" id="First_Internship">First Internship</button>
+<div class="content">
+  <p>Akshada is due to start the SWE Google Internship in Summer 2025</p>
+</div>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
